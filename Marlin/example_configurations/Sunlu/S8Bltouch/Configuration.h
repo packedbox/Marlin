@@ -391,6 +391,11 @@
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+// Sunlu S8
+#define DEFAULT_Kp 33.04
+#define DEFAULT_Ki 3.51
+#define DEFAULT_Kd 77.81
+
 // Ultimaker
 //#define DEFAULT_Kp 22.2
 //#define DEFAULT_Ki 1.08
@@ -405,11 +410,6 @@
 //#define DEFAULT_Kp 63.0
 //#define DEFAULT_Ki 2.25
 //#define DEFAULT_Kd 440
-
-// AutoTune
-#define DEFAULT_Kp 28.15
-#define DEFAULT_Ki 2.53
-#define DEFAULT_Kd 78.41
 
 #endif // PIDTEMP
 
@@ -446,6 +446,11 @@
 
 //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+// Sunlu S8
+#define DEFAULT_bedKp 156.26
+#define DEFAULT_bedKi 24.15
+#define DEFAULT_bedKd 674.17
+
 //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
 //#define DEFAULT_bedKp 10.00
@@ -461,9 +466,6 @@
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
-#define DEFAULT_bedKp 892.04
-#define DEFAULT_bedKi 167.52
-#define DEFAULT_bedKd 1187.53
 // @section extruder
 
 /**
@@ -631,7 +633,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96 } //DML stock firmware
 #define DEFAULT_AXIS_STEPS_PER_UNIT \
   {                                 \
-    80, 80, 400, 103                \
+    80, 80, 400, 99.04              \
   } //DML 103 based on extruder calibration
 
 /**
@@ -809,9 +811,15 @@
  *      O-- FRONT --+
  *    (0,0)
  */
+
+// For RedSquirel Bltouch mount :  https://www.thingiverse.com/thing:4293814
 #define X_PROBE_OFFSET_FROM_EXTRUDER 33  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -10 // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+
+//#define X_PROBE_OFFSET_FROM_EXTRUDER 10 // X offset: -left  +right  [of the nozzle]
+//#define Y_PROBE_OFFSET_FROM_EXTRUDER 10 // Y offset: -front +behind [the nozzle]
+//#define Z_PROBE_OFFSET_FROM_EXTRUDER 0  // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 33
@@ -1021,7 +1029,6 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-
 #define RESTORE_LEVELING_AFTER_G28
 
 /**

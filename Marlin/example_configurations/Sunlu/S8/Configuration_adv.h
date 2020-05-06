@@ -270,9 +270,9 @@
 //#define CASE_LIGHT_USE_NEOPIXEL           // Use Neopixel LED as case light, requires NEOPIXEL_LED.
 #if ENABLED(CASE_LIGHT_USE_NEOPIXEL)
 #define CASE_LIGHT_NEOPIXEL_COLOR \
-  {                               \
-    255, 255, 255, 255            \
-  } // { Red, Green, Blue, White }
+   {                              \
+      255, 255, 255, 255          \
+   } // { Red, Green, Blue, White }
 #endif
 #endif
 
@@ -351,10 +351,10 @@
 #define X2_MIN_POS 80          // set minimum to ensure second x-carriage doesn't hit the parked first X-carriage
 #define X2_MAX_POS 353         // set maximum to the distance between toolheads when both heads are homed
 #define X2_HOME_DIR 1          // the second X-carriage always homes to the maximum endstop position
-#define X2_HOME_POS X2_MAX_POS // default home position is the maximum carriage position
-                               // However: In this mode the HOTEND_OFFSET_X value for the second extruder provides a software
-                               // override for X2_HOME_POS. This also allow recalibration of the distance between the two endstops
-                               // without modifying the firmware (through the "M218 T1 X???" command).
+#define X2_HOME_POS X2_MAX_POS // default home position is the maximum carriage position                                           \
+                               // However: In this mode the HOTEND_OFFSET_X value for the second extruder provides a software      \
+                               // override for X2_HOME_POS. This also allow recalibration of the distance between the two endstops \
+                               // without modifying the firmware (through the "M218 T1 X???" command).                             \
                                // Remember: you should set the second extruder x-offset to 0 in your slicer.
 
 // There are a few selectable movement modes for dual x-carriages using M605 S<mode>
@@ -389,9 +389,9 @@
 #define Y_HOME_BUMP_MM 5
 #define Z_HOME_BUMP_MM 2
 #define HOMING_BUMP_DIVISOR \
-  {                         \
-    2, 2, 4                 \
-  }                // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+   {                        \
+      2, 2, 4               \
+   }               // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 #define QUICK_HOME //DML               // If homing includes X and Y, do a diagonal move initially
 
 // When G28 is called, this option will make Y home before X
@@ -461,10 +461,10 @@
 
 // @section machine
 
-#define AXIS_RELATIVE_MODES    \
-  {                            \
-    false, false, false, false \
-  }
+#define AXIS_RELATIVE_MODES      \
+   {                             \
+      false, false, false, false \
+   }
 
 // Allow duplication mode with a basic dual-nozzle extruder
 //#define DUAL_NOZZLE_DUPLICATION_MODE
@@ -492,10 +492,10 @@
 // @section lcd
 
 #if ENABLED(ULTIPANEL)
-#define MANUAL_FEEDRATE          \
-  {                              \
-    50 * 60, 50 * 60, 4 * 60, 60 \
-  }                            // Feedrates for manual moves along X, Y, Z, E from panel
+#define MANUAL_FEEDRATE            \
+   {                               \
+      50 * 60, 50 * 60, 4 * 60, 60 \
+   }                           // Feedrates for manual moves along X, Y, Z, E from panel
 #define ULTIPANEL_FEEDMULTIPLY // Comment to disable setting feedrate multiplier via encoder
 #endif
 
@@ -534,10 +534,10 @@
 //#define ADAPTIVE_STEP_SMOOTHING
 
 // Microstep setting (Only functional when stepper driver microstep pins are connected to MCU.
-#define MICROSTEP_MODES \
-  {                     \
-    16, 16, 16, 16, 16  \
-  } // [1,2,4,8,16]
+#define MICROSTEP_MODES  \
+   {                     \
+      16, 16, 16, 16, 16 \
+   } // [1,2,4,8,16]
 
 /**
  *  @section  stepper motor current
@@ -582,10 +582,10 @@
 #define DIGIPOT_I2C_NUM_CHANNELS 8 // 5DPRINT: 4     AZTEEG_X3_PRO: 8
 // Actual motor currents in Amps. The number of entries must match DIGIPOT_I2C_NUM_CHANNELS.
 // These correspond to the physical drivers, so be mindful if the order is changed.
-#define DIGIPOT_I2C_MOTOR_CURRENTS         \
-  {                                        \
-    1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 \
-  } //  AZTEEG_X3_PRO
+#define DIGIPOT_I2C_MOTOR_CURRENTS           \
+   {                                         \
+      1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 \
+   } //  AZTEEG_X3_PRO
 
 //===========================================================================
 //=============================Additional Features===========================
@@ -1322,8 +1322,8 @@
    * }
    */
 #define TMC_ADV() \
-  {               \
-  }
+   {              \
+   }
 
 #endif // TMC2130 || TMC2208
 

@@ -392,10 +392,15 @@
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+// Sunlu S8
+#define DEFAULT_Kp 33.04
+#define DEFAULT_Ki 3.51
+#define DEFAULT_Kd 77.81
+
 // Ultimaker
-#define DEFAULT_Kp 22.2
-#define DEFAULT_Ki 1.08
-#define DEFAULT_Kd 114
+//#define DEFAULT_Kp 22.2
+//#define DEFAULT_Ki 1.08
+//#define DEFAULT_Kd 114
 
 // MakerGear
 //#define DEFAULT_Kp 7.0
@@ -426,7 +431,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -442,11 +447,16 @@
 
 //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+// Sunlu S8
+#define DEFAULT_bedKp 156.26
+#define DEFAULT_bedKi 24.15
+#define DEFAULT_bedKd 674.17
+
 //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-#define DEFAULT_bedKp 10.00
-#define DEFAULT_bedKi .023
-#define DEFAULT_bedKd 305.4
+//#define DEFAULT_bedKp 10.00
+//#define DEFAULT_bedKi .023
+//#define DEFAULT_bedKd 305.4
 
 //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
@@ -624,7 +634,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96 } //DML stock firmware
 #define DEFAULT_AXIS_STEPS_PER_UNIT \
   {                                 \
-    80, 80, 400, 103                \
+    80, 80, 400, 99.04              \
   } //DML 103 based on extruder calibration
 
 /**
@@ -738,8 +748,8 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-//#define PROBE_MANUALLY
-//#define MANUAL_PROBE_START_Z 0.2
+#define PROBE_MANUALLY
+#define MANUAL_PROBE_START_Z 0.2
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
