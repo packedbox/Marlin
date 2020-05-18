@@ -121,7 +121,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200 //  [KLW]
+#define BAUDRATE 250000 //  [KLW]
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "SUNLU Beast" //  [KLW]
+#define CUSTOM_MACHINE_NAME "SUNLU SKR BLTOUCH" //  [KLW]
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -1005,10 +1005,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET \
-  {                            \
-    -35, -8, 0                 \
-  } //  [KLW]
+#define NOZZLE_TO_PROBE_OFFSET { 33, 10, 0 } // KLW
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
